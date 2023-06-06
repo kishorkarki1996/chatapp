@@ -1,1 +1,204 @@
+// // Custom Theming for Angular Material
+// // For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// // Plus imports for other components in your app.
+
+// // Include the common styles for Angular Material. We include this here so that you only
+// // have to load a single css file for Angular Material in your app.
+// // Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+$chat-primary: mat.define-palette(mat.$indigo-palette);
+$chat-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+$chat-warn: mat.define-palette(mat.$red-palette);
+
+// // Create the theme object. A theme consists of configurations for individual
+// // theming systems such as "color" or "typography".
+$chat-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $chat-primary,
+      accent: $chat-accent,
+      warn: $chat-warn,
+    ),
+  )
+);
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+@include mat.all-component-themes($chat-theme);
+
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+:root {
+  --neutral-50: theme(colors.slate.50);
+  --neutral-100: theme(colors.slate.100);
+  --neutral-200: theme(colors.slate.200);
+  --neutral-300: theme(colors.slate.300);
+  --neutral-400: theme(colors.slate.400);
+  --neutral-500: theme(colors.slate.500);
+  --neutral-600: theme(colors.slate.600);
+  --neutral-700: theme(colors.slate.700);
+  --neutral-800: theme(colors.slate.800);
+  --neutral-900: theme(colors.slate.900);
+  --neutral-950: theme(colors.slate.950);
+
+  --primary-50: theme(colors.purple.50);
+  --primary-100: theme(colors.purple.100);
+  --primary-200: theme(colors.purple.200);
+  --primary-300: theme(colors.purple.300);
+  --primary-400: theme(colors.purple.400);
+  --primary-500: theme(colors.purple.500);
+  --primary-600: theme(colors.purple.600);
+  --primary-700: theme(colors.purple.700);
+  --primary-800: theme(colors.purple.800);
+  --primary-900: theme(colors.purple.900);
+  --primary-950: theme(colors.purple.950);
+
+  --neutral-bg: theme(colors.white);
+  --neutral: var(--neutral-700);
+  --on-neutral-bg: var(--primary-950);
+  --primary: var(--primary-500);
+  --on-primary: theme(colors.white);
+  --primary-hover: var(--primary-600);
+  --primary-bg: var(--primary-50);
+  --on-primary-bg: var(--primary-900);
+  --border: var(--neutral-200);
+  --muted: var(--neutral-400);
+  --muted-dark: var(--neutral-900);
+  --offwhite: var(--neutral-100);
+  --info: hsl(203, 80%, 45%);
+  --success: hsl(120, 69%, 44%);
+  --error: hsl(0, 81%, 59%);
+  --contrast: var(--neutral-950);
+  --on-contrast: var(--primary-50);
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  @apply text-on-neutral-bg;
+}
+.icon {
+  &--lg {
+    @apply text-3xl;
+  }
+  &--sm {
+    @apply text-sm;
+  }
+  &--muted {
+    @apply text-muted;
+  }
+  &--primary {
+    @apply text-on-neutral-bg hover:text-primary-hover transition-colors;
+  }
+  &--on-primary {
+    @apply text-on-primary hover:text-on-neutral-bg transition-colors;
+  }
+}
+
+.tab {
+  @apply grid gap-1 inline-block place-items-center p-2 relative hover:text-primary-hover transition-colors;
+  &--active {
+    @apply before:absolute before:w-full before:h-0.5 before:bottom-0 before:bg-success;
+  }
+  &__text {
+    @apply font-semibold;
+  }
+  &__icon {
+    @apply icon--lg;
+  }
+}
+.chat {
+  @apply flex gap-4 p-4 hover:bg-primary-bg transition-colors border-b border-b-border;
+  &__text {
+    @apply flex justify-between flex-col;
+  }
+  .name {
+    @apply text-on-neutral-bg text-sm font-semibold;
+  }
+  .content__text {
+    @apply text-xs text-on-neutral-bg flex items-end gap-3 max-w-[150px] truncate;
+    &--error {
+      @apply text-error;
+    }
+  }
+  &__unread {
+    @apply mx-auto w-4 h-4 text-xs grid text-center rounded-full text-white bg-error;
+  }
+  &__img {
+    @apply w-12 h-12 relative before:absolute before:w-3 before:h-3 before:bg-muted before:bottom-0 before:right-0 before:rounded-full before:border-2 before:border-white;
+
+    img {
+      @apply w-full h-full rounded-full object-cover;
+    }
+  }
+  &__status {
+    @apply self-end ml-auto;
+  }
+  .time {
+    @apply text-muted text-xs;
+  }
+  &__check {
+    @apply text-base;
+  }
+}
+.chat--active {
+  @apply before:bg-success;
+}
+#message:hover #chatOptions {
+  @apply right-1 transition-all;
+}
+.options {
+  &__text {
+    @apply text-sm text-muted;
+  }
+  &__btn {
+    @apply absolute -right-8 top-0 text-muted grid place-items-center;
+  }
+}
+
+.input-field {
+  @apply border-border focus:ring-1 focus:ring-border focus:border-primary text-on-neutral-bg w-full p-2 pr-16 rounded-lg;
+}
+
+// call
+.details {
+  @apply text-center;
+  &__name {
+    @apply font-bold;
+  }
+  &__status {
+    @apply font-semibold;
+  }
+}
+.call__icon {
+  @apply bg-neutral rounded-full p-2 hover:opacity-90 transition-colors;
+  &--info {
+    @apply bg-info;
+  }
+  &--error {
+    @apply bg-error;
+  }
+}
+.caller {
+  @apply border-2 border-neutral-bg;
+}
+.call__img {
+  @apply w-40 h-40 rounded-full  overflow-hidden mx-auto;
+  img {
+    @apply w-full h-full  object-cover;
+  }
+}

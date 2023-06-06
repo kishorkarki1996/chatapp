@@ -1,0 +1,27 @@
+<div
+  class="flex flex-col max-w-5xl border border-border min-h-screen bg-contrast text-on-contrast"
+>
+  <header class="flex items-center p-4">
+    <button class="material-symbols-rounded icon--lg">arrow_back</button>
+    <div class="text-center mx-auto">
+      <h1 class="font-bold">Ganesh Shrestha</h1>
+      <p>Ringing...</p>
+    </div>
+  </header>
+
+  <!-- default-call -->
+  <main class="relative lg:flex flex-grow">
+    <div class="user lg:basis-1/2 h-full">
+      <img src="../../assets/receiver.png" alt="" class="object-cover w-full" />
+    </div>
+    <h1 class="font-bold text-center">Incoming video call popup</h1>
+  </main>
+  <footer class="flex justify-center gap-4 items-center bg-muted-dark p-4">
+    <button class="material-symbols-rounded call__icon">cameraswitch</button>
+    <button class="material-symbols-rounded call__icon">video_call</button>
+    <button class="material-symbols-rounded call__icon">mic</button>
+    <button class="material-symbols-rounded call__icon call__icon--error">
+      call_end
+    </button>
+  </footer>
+</div>

@@ -1,0 +1,47 @@
+.sender {
+  @apply flex items-end gap-4;
+}
+.user {
+  @apply float-right;
+}
+.message {
+  &__time {
+    @apply text-muted text-xs mb-2;
+    &--right {
+      @apply text-right;
+    }
+  }
+  &__row {
+    @apply flex items-start gap-2;
+    &--user {
+      @apply flex-row-reverse;
+    }
+  }
+  &__block {
+    @apply bg-primary-bg rounded-lg max-w-md p-4 text-sm cursor-pointer relative overflow-hidden shadow-sm;
+    &--user {
+      @apply bg-offwhite;
+    }
+  }
+  &__link {
+    @apply border border-border bg-neutral-bg mt-2 overflow-hidden p-2 pl-8 rounded-md relative before:absolute before:bg-info before:w-4 before:h-full before:left-0 before:top-0;
+  }
+}
+.emoji {
+  @apply text-lg text-muted hover:scale-110 hover:text-primary transition-all relative;
+}
+.emoji__icons {
+  @apply text-primary hover:-translate-y-1 transition-transform;
+}
+.file {
+  @apply bg-neutral-bg p-2 rounded-md;
+  &__title {
+    @apply text-sm text-neutral;
+  }
+  &__info {
+    @apply text-neutral text-xs flex items-start mt-2;
+    p {
+      @apply px-2 border-r border-r-border;
+    }
+  }
+}

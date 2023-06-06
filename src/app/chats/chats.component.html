@@ -1,0 +1,174 @@
+<div class="chat-list grid py-4">
+  <app-header></app-header>
+  <!-- typing chat card -->
+  <div class="chat">
+    <a href="" class="chat__img">
+      <img src="../../assets/edward.png" alt="edward" />
+      <div class="chat__indicator chat__indicator--active"></div>
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Edward Carry</h2>
+      <div class="content">
+        <div class="content__text"><span class="text"> Typing... </span></div>
+      </div>
+    </div>
+
+    <div class="chat__status ml-auto">
+      <div class="chat__unread">
+        <span class="">1</span>
+      </div>
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">12:00 PM</small>
+      </div>
+    </div>
+  </div>
+  <!-- default chat card -->
+  <div class="chat">
+    <a href="" class="chat__img chat--active">
+      <img src="../../assets/jenny.jpg" alt="jenny" />
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Jenny Mark</h2>
+      <div class="content">
+        <div class="content__text">
+          <span class="text"> Hello, How are you? </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__status ml-auto">
+      <div class="chat__unread">
+        <span class="">1</span>
+      </div>
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">12:45 PM</small>
+      </div>
+    </div>
+  </div>
+  <!-- call chat card -->
+  <div class="chat">
+    <a href="" class="chat__img chat--active">
+      <img src="../../assets/sarah.jpg" alt="sarah" />
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Sarah Conner</h2>
+      <div class="content">
+        <div class="content__text">
+          <span class="material-symbols-rounded icon--muted">call_end</span>
+          <span class="text">Call ended <span class="">1h 49m 30s</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__status ml-auto">
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">11:00 PM</small>
+      </div>
+    </div>
+  </div>
+  <!-- No answer chat card -->
+  <div class="chat">
+    <a href="" class="chat__img">
+      <img src="../../assets/john.jpg" alt="john" />
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Mikkel Nielson</h2>
+      <div class="content">
+        <div class="content__text content__text--error">
+          <span class="material-symbols-rounded">call_end</span>
+          <span class="text">No answer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__status ml-auto">
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">10:20 AM</small>
+      </div>
+    </div>
+  </div>
+  <!-- Missed call chat card -->
+  <div class="chat">
+    <a href="" class="chat__img">
+      <img src="../../assets/mikhaylov.jpg" alt="mikhaylov" />
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Michaeal Khandwad</h2>
+      <div class="content">
+        <div class="content__text content__text--error">
+          <span class="material-symbols-rounded">phone_missed</span>
+          <span class="text">Missed Call</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__status ml-auto">
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">09:20 AM</small>
+      </div>
+    </div>
+  </div>
+  <!--voice message card -->
+  <div class="chat">
+    <a href="" class="chat__img">
+      <img src="../../assets/john.jpg" alt="john" />
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Mikkel Nielson</h2>
+      <div class="content">
+        <div class="content__text">
+          <span class="material-symbols-rounded icon--muted">mic</span>
+          <span class="text">Sent a voice meesage</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__status">
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">Yesterday</small>
+      </div>
+    </div>
+  </div>
+  <!-- photo chat card -->
+  <div class="chat">
+    <a href="" class="chat__img">
+      <img src="../../assets/john.jpg" alt="john" />
+    </a>
+    <div class="chat__text">
+      <h2 class="name">Mikkel Nielson</h2>
+      <div class="content">
+        <div class="content__text">
+          <span class="material-symbols-rounded icon--muted">image</span>
+          <span class="text">Sent a photo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat__status ml-auto">
+      <div class="chat__time flex items-center gap-2">
+        <span class="material-symbols-rounded icon--muted icon--sm">
+          done
+        </span>
+        <small class="time">03/04/2023</small>
+      </div>
+    </div>
+  </div>
+</div>

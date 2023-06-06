@@ -1,0 +1,293 @@
+<div class="chat-right flex flex-col max-w-5xl border border-border">
+  <header class="interface-header flex items-center gap-6 p-4 bg-primary">
+    <button class="">
+      <span class="material-symbols-rounded"> arrow_back </span>
+    </button>
+    <a href="" class="chat__img chat--active">
+      <img src="../../assets/edward.png" alt="" />
+    </a>
+    <h1 class="font-bold text-lg text-on-primary">Edward Carry</h1>
+    <!-- icons right -->
+    <div class="ml-auto space-x-4">
+      <button>
+        <span
+          class="material-symbols-rounded icon--on-primary hover:bg-white rounded-full p-2"
+        >
+          call
+        </span>
+      </button>
+      <button [matMenuTriggerFor]="callPopup">
+        <span
+          class="material-symbols-rounded icon--on-primary hover:bg-white rounded-full p-2"
+        >
+          video_call
+        </span>
+      </button>
+      <button [matMenuTriggerFor]="chatOptions" class="">
+        <span
+          class="material-symbols-rounded icon--on-primary hover:bg-white rounded-full p-2"
+        >
+          more_vert
+        </span>
+      </button>
+      <!-- call popup -->
+      <mat-menu #callPopup="matMenu">
+        <app-call-popup></app-call-popup>
+      </mat-menu>
+      <!-- menu options -->
+      <mat-menu #chatOptions="matMenu" class="menu__options">
+        <button mat-menu-item>
+          <div class="options__text">Search Conversation</div>
+        </button>
+        <button mat-menu-item>
+          <div class="options__text">Mute Notifications</div>
+        </button>
+        <button mat-menu-item>
+          <div class="options__text">Delete Chat</div>
+        </button>
+        <button mat-menu-item><div class="options__text">Report</div></button>
+        <button mat-menu-item><div class="options__text">Block</div></button>
+      </mat-menu>
+    </div>
+  </header>
+  <main class="chat-section bg-neutral-bg px-8">
+    <div class="conversation flex flex-col gap-4 py-8">
+      <!-- single sender chat component -->
+      <div class="sender">
+        <a href="" class="chat__img chat--active">
+          <img src="../../assets/edward.png" alt="" />
+        </a>
+        <!-- Message section -->
+        <div class="message">
+          <div class="message__time">Yesterday</div>
+          <div class="message__row">
+            <button class="message__block" id="message">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Consequuntur fuga, quaerat perspiciatis corporis accusamus nobis
+              qui magnam exercitationem eveniet tenetur.
+              <!-- chat options | Reply | Delete | Forward |  -->
+              <button class="options__btn" id="chatOptions">
+                <!-- expand icon -->
+                <span class="material-symbols-rounded text-3xl">
+                  expand_more
+                </span>
+              </button>
+            </button>
+
+            <!-- message emoji -->
+            <button class="material-symbols-rounded emoji">
+              sentiment_satisfied
+              <!-- reactions -->
+              <div
+                class="emojiset flex gap-4 px-4 py-2 bg-white rounded-full shadow-md absolute -top-12 right-0"
+              >
+                <span class="material-symbols-rounded emoji__icons">
+                  thumb_up
+                </span>
+                <span class="material-symbols-rounded emoji__icons">
+                  sentiment_satisfied
+                </span>
+                <span class="material-symbols-rounded emoji__icons">
+                  sentiment_dissatisfied
+                </span>
+                <span class="material-symbols-rounded emoji__icons">
+                  sentiment_very_satisfied
+                </span>
+                <span class="material-symbols-rounded emoji__icons">
+                  favorite
+                </span>
+
+                <span class="material-symbols-rounded emoji__icons">
+                  thumb_down
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- single user chat component -->
+      <div class="user">
+        <!-- Message section -->
+        <div class="message message--user">
+          <div class="message__time message__time--right">10:23 PM</div>
+          <div class="message__row message__row--user">
+            <div class="message__block message__block--user" id="message">
+              I did, our whole team rubbed it allll over their bread.lorem Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit. Odit, impedit.
+              <!-- chat options -->
+              <button class="options__btn" id="chatOptions">
+                <!-- expand icon -->
+                <span class="material-symbols-rounded text-3xl">
+                  expand_more
+                </span>
+              </button>
+            </div>
+            <!-- message emoji -->
+            <button class="material-symbols-rounded emoji">
+              sentiment_satisfied
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- single sender chat component -->
+      <div class="sender">
+        <a href="" class="chat__img chat--active">
+          <img src="../../assets/edward.png" alt="" />
+        </a>
+        <!-- Message section -->
+        <div class="message">
+          <div class="message__time">10:25 PM</div>
+          <div class="message__row">
+            <div class="message__block" id="message">
+              Check this file please.
+              <!-- chat options -->
+              <button class="options__btn" id="chatOptions">
+                <!-- expand icon -->
+                <span class="material-symbols-rounded text-3xl">
+                  expand_more
+                </span>
+              </button>
+              <!-- Message File -->
+              <div class="file mt-2 flex items-center gap-4">
+                <img src="../../assets/pdf.png" class="w-8 h-8" alt="" />
+                <div class="">
+                  <div class="file__title">Documetation.pdf</div>
+                  <div class="file__info">
+                    <p>2 pages</p>
+                    <p>PDF</p>
+                    <p>218 KB</p>
+                  </div>
+                </div>
+
+                <a href="">
+                  <span
+                    class="material-symbols-rounded icon--primary rounded-full p-1 border border-primary hover:bg-primary-light transition-colors"
+                  >
+                    download
+                  </span>
+                </a>
+              </div>
+            </div>
+            <!-- message emoji -->
+            <button class="material-symbols-rounded emoji">
+              sentiment_satisfied
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- single user chat component -->
+      <div class="user">
+        <!-- Message section -->
+        <div class="message message--user">
+          <div class="message__time message__time--right">10:28 PM</div>
+          <div class="message__row message__row--user">
+            <div class="message__block message__block--user" id="message">
+              Check the link below for more information.
+              <!-- chat options -->
+              <button class="options__btn" id="chatOptions">
+                <!-- expand icon -->
+                <span class="material-symbols-rounded text-3xl">
+                  expand_more
+                </span>
+              </button>
+              <!-- link type message -->
+              <div class="message__link">
+                <h1 class="font-bold">Michael Kobold shared a link</h1>
+                <div class="flex items-center gap-2 py-1">
+                  <button class="material-symbols-rounded text-info">
+                    link
+                  </button>
+
+                  <a href="https://heroicons.com/" class="text-info"
+                    >https://heroicons.com/</a
+                  >
+                </div>
+                <p class="text-xs text-muted">
+                  Beautiful hand-crafted SVG icons, by the makers of Tailwind
+                  CSS.
+                </p>
+              </div>
+            </div>
+            <!-- message emoji -->
+            <button class="material-symbols-rounded emoji">
+              sentiment_satisfied
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- single sender chat component -->
+      <div class="sender flex gap-4">
+        <a href="" class="chat__img chat--active">
+          <img src="../../assets/edward.png" alt="" />
+        </a>
+        <!-- Message section -->
+        <div class="message">
+          <div class="message__time">10:32 PM</div>
+          <div class="message__row">
+            <div class="message__block" id="message">
+              <!-- chat options -->
+              <button class="options__btn" id="chatOptions">
+                <!-- expand icon -->
+                <span class="material-symbols-rounded text-3xl">
+                  expand_more
+                </span>
+              </button>
+              <!-- Message Audio -->
+              <div class="message__audio flex gap-2">
+                <span class="material-symbols-rounded text-primary">
+                  play_circle
+                </span>
+                <button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="icon__lg icon--accent"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm14.024-.983a1.125 1.125 0 010 1.966l-5.603 3.113A1.125 1.125 0 019 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <img src="../../assets/audio.svg" alt="" />
+              </div>
+            </div>
+            <!-- message emoji -->
+            <button class="material-symbols-rounded emoji">
+              sentiment_satisfied
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- is typing -->
+      <div
+        class="flex items-center justify-center gap-2 text-sm text-muted mb-4"
+      >
+        Edward is typing
+
+        <span class="material-symbols-rounded text-primary"> pending </span>
+      </div>
+    </div>
+
+    <!-- typing section -->
+    <div class="bg-primary -m-8 flex items-center px-8 py-4 gap-4">
+      <button class="material-symbols-rounded icon--lg icon--on-primary">
+        mood
+      </button>
+      <button class="material-symbols-rounded icon--lg icon--on-primary">
+        attachment
+      </button>
+
+      <div class="input w-full relative">
+        <input type="text" matInput placeholder="Message" class="input-field" />
+        <button
+          class="material-symbols-rounded icon--lg icon--primary absolute right-2"
+        >
+          send
+        </button>
+      </div>
+    </div>
+  </main>
+</div>

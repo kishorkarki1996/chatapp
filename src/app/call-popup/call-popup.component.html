@@ -1,0 +1,96 @@
+<div
+  class="flex flex-col max-w-5xl border border-border min-h-screen bg-contrast text-on-contrast"
+>
+  <header class="flex justify-between items-center p-4">
+    <button class="material-symbols-rounded icon--lg">arrow_back</button>
+    <div class="text-center">
+      <h1 class="font-bold">Ganesh Shrestha</h1>
+      <p>14:49</p>
+    </div>
+    <button class="material-symbols-rounded icon--lg">person_add</button>
+  </header>
+
+  <!-- default-call -->
+  <main class="bg-blue-200 relative lg:flex flex-grow">
+    <div class="user lg:basis-1/2 h-full">
+      <img src="../../assets/receiver.png" alt="" class="w-full object-cover" />
+    </div>
+    <div
+      class="caller lg:basis-1/2 w-36 h-48 absolute lg:relative lg:w-full lg:h-auto lg:right-0 lg:top-0 right-8 top-8"
+    >
+      <img
+        src="../../assets/caller.png"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+      <button
+        class="material-symbols-rounded call__icon call__icon--error absolute top-2 left-2 lg:top-6 lg:left-6"
+      >
+        cameraswitch
+      </button>
+      <button
+        class="material-symbols-rounded call__icon call__icon--error absolute bottom-2 right-2 lg:bottom-6 lg:right-6"
+      >
+        mic_off
+      </button>
+    </div>
+  </main>
+  <!-- top-down -->
+  <!-- <main class="flex flex-col flex-grow bg-blue-200 lg:hidden">
+    <div class="user w-full flex-grow">
+      <img src="../../assets/edward.png" alt="" class="w-full object-cover" />
+    </div>
+    <div class="caller w-full flex-grow relative">
+      <img
+        src="../../assets/jenny.jpg"
+        alt=""
+        class="w-full h-full object-cover"
+      />
+      <button
+        class="material-symbols-rounded call__icon call__icon--error absolute top-6 left-6"
+      >
+        cameraswitch
+      </button>
+      <button
+        class="material-symbols-rounded call__icon call__icon--error absolute bottom-6 right-6"
+      >
+        mic_off
+      </button>
+    </div>
+  </main> -->
+  <!-- mobile -->
+  <!-- <main class="flex flex-col flex-grow bg-blue-200 lg:hidden">
+    <div class="user w-full">
+      <img
+        src="../../assets/edward.png"
+        alt=""
+        class="h-full w-full object-cover"
+      />
+    </div>
+    <div class="caller w-full h-full relative">
+      <img
+        src="../../assets/jenny.jpg"
+        alt=""
+        class="min- w-full object-cover"
+      />
+      <button
+        class="material-symbols-rounded call__icon call__icon--error absolute top-6 left-6"
+      >
+        cameraswitch
+      </button>
+      <button
+        class="material-symbols-rounded call__icon call__icon--error absolute bottom-6 right-6"
+      >
+        mic_off
+      </button>
+    </div>
+  </main> -->
+  <footer class="flex justify-center gap-4 items-center p-4">
+    <button class="material-symbols-rounded call__icon">cameraswitch</button>
+    <button class="material-symbols-rounded call__icon">video_call</button>
+    <button class="material-symbols-rounded call__icon">mic</button>
+    <button class="material-symbols-rounded call__icon call__icon--error">
+      call_end
+    </button>
+  </footer>
+</div>

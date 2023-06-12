@@ -1,0 +1,196 @@
+<!-- Main modal -->
+<div
+  id="defaultModal"
+  tabindex="-1"
+  aria-hidden="true"
+  class="fixed hidden top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden md:inset-0 h-[calc(100%-1rem)] max-h-full"
+>
+  <div class="bg-white w-full h-full max-w-lg flex flex-col rounded-md">
+    <!-- Modal Header -->
+    <header class="space-y-4">
+      <!-- Modal header -->
+      <div
+        class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray bg-primary-light"
+      >
+        <h3 class="text-xl font-semibold text-white">Forward message to</h3>
+        <button
+          type="button"
+          class="text-white bg-transparent hover:bg-primary-dark hover:text-gray-lightest rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+          data-modal-hide="defaultModal"
+        >
+          <span class="icon-cross text-white"></span>
+          <span class="sr-only">Close modal</span>
+        </button>
+      </div>
+      <!-- search field -->
+      <div class="relative grid items-center px-4">
+        <div
+          class="absolute inset-y-0 right-2 flex items-center pr-3 pointer-events-none"
+        >
+          <button class="icon-search"></button>
+        </div>
+        <input
+          type="text"
+          id="input-group-1"
+          class="border border-gray-light text-gray-darkest text-sm rounded-lg focus:ring-info focus:border-info block w-full pr-10"
+          placeholder="Search..."
+        />
+      </div>
+    </header>
+    <!-- Modal Body -->
+    <main class="px-6 py-3 space-y-4 h-full overflow-y-auto flex-auto">
+      <p class="text-gray-dark">Recent chats</p>
+      <div class="forward__list">
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/edward.png" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Johnathan Wick</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/sarah.jpg" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Sarah Connor</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/jenny.jpg" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Jenny Jackson</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/mikhaylov.jpg" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Mikhalylov Ian</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/edward.png" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Johnathan Wick</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/sarah.jpg" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Sarah Connor</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/jenny.jpg" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Jenny Jackson</h1>
+        </div>
+        <!-- item -->
+        <div class="forward__item">
+          <!-- checkbox -->
+          <input
+            id="default-checkbox"
+            type="checkbox"
+            value=""
+            class="w-4 h-4 text-info bg-gray-100 border-gray-dark rounded-sm focus:ring-info-light"
+          />
+
+          <div class="forward__item__avatar">
+            <a href="" class="">
+              <img src="../../assets/mikhaylov.jpg" alt="" />
+            </a>
+          </div>
+          <h1 class="text-gray-darkest text-sm lg:text-base">Mikhalylov Ian</h1>
+        </div>
+      </div>
+    </main>
+    <!-- ModalFooter -->
+    <footer
+      class="flex items-center px-6 py-3 space-x-2 border-t border-gray-lightest rounded-b"
+    >
+      <button
+        data-modal-hide="defaultModal"
+        type="button"
+        class="text-white flex items-center gap-2 bg-info hover:bg-info-dark focus:ring-4 focus:outline-none focus:ring-info-light font-semibold rounded-md text-sm px-5 py-2.5 text-center"
+      >
+        <p>Send</p>
+        <span class="icon-send-arrow"></span>
+      </button>
+    </footer>
+  </div>
+</div>

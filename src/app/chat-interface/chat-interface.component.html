@@ -1,22 +1,24 @@
 <div class="chat-right flex flex-col max-w-5xl border border-border">
-  <header class="interface-header flex items-center gap-6 p-4 bg-primary">
-    <button class="">
-      <span class="material-symbols-rounded"> arrow_back </span>
+  <header
+    class="interface-header flex items-center gap-2 lg:gap-6 p-4 bg-primary"
+  >
+    <button class="lg:hidden">
+      <span class="material-symbols-rounded text-neutral-bg"> arrow_back </span>
     </button>
     <a href="" class="chat__img chat--active">
       <img src="../../assets/edward.png" alt="" />
     </a>
-    <h1 class="font-bold text-lg text-on-primary">Edward Carry</h1>
+    <h1 class="font-bold text-sm lg:text-lg text-on-primary">Edward Carry</h1>
     <!-- icons right -->
-    <div class="ml-auto space-x-4">
-      <button>
+    <div class="ml-auto lg:space-x-4">
+      <button [matMenuTriggerFor]="callPopup">
         <span
           class="material-symbols-rounded icon--on-primary hover:bg-white rounded-full p-2"
         >
           call
         </span>
       </button>
-      <button [matMenuTriggerFor]="callPopup">
+      <button class="">
         <span
           class="material-symbols-rounded icon--on-primary hover:bg-white rounded-full p-2"
         >
@@ -31,8 +33,8 @@
         </span>
       </button>
       <!-- call popup -->
-      <mat-menu #callPopup="matMenu">
-        <app-call-popup></app-call-popup>
+      <mat-menu #callPopup="matMenu" class="">
+        <app-make-call class=""></app-make-call>
       </mat-menu>
       <!-- menu options -->
       <mat-menu #chatOptions="matMenu" class="menu__options">
@@ -50,7 +52,7 @@
       </mat-menu>
     </div>
   </header>
-  <main class="chat-section bg-neutral-bg px-8">
+  <main class="chat-section bg-neutral-bg px-4 lg:px-8">
     <div class="conversation flex flex-col gap-4 py-8">
       <!-- single sender chat component -->
       <div class="sender">
@@ -75,32 +77,32 @@
             </button>
 
             <!-- message emoji -->
-            <button class="material-symbols-rounded emoji">
+            <button
+              class="material-symbols-rounded emoji"
+              [mat-menu-trigger-for]="emojis"
+            >
               sentiment_satisfied
               <!-- reactions -->
-              <div
-                class="emojiset flex gap-4 px-4 py-2 bg-white rounded-full shadow-md absolute -top-12 right-0"
-              >
-                <span class="material-symbols-rounded emoji__icons">
+              <mat-menu #emojis="matMenu" class="p-2">
+                <button class="material-symbols-rounded emoji__icons p-2">
                   thumb_up
-                </span>
-                <span class="material-symbols-rounded emoji__icons">
+                </button>
+                <button class="material-symbols-rounded emoji__icons p-2">
                   sentiment_satisfied
-                </span>
-                <span class="material-symbols-rounded emoji__icons">
+                </button>
+                <button class="material-symbols-rounded emoji__icons p-2">
                   sentiment_dissatisfied
-                </span>
-                <span class="material-symbols-rounded emoji__icons">
+                </button>
+                <button class="material-symbols-rounded emoji__icons p-2">
                   sentiment_very_satisfied
-                </span>
-                <span class="material-symbols-rounded emoji__icons">
+                </button>
+                <button class="material-symbols-rounded emoji__icons p-2">
                   favorite
-                </span>
-
-                <span class="material-symbols-rounded emoji__icons">
+                </button>
+                <button class="material-symbols-rounded emoji__icons p-2">
                   thumb_down
-                </span>
-              </div>
+                </button>
+              </mat-menu>
             </button>
           </div>
         </div>
@@ -161,7 +163,7 @@
 
                 <a href="">
                   <span
-                    class="material-symbols-rounded icon--primary rounded-full p-1 border border-primary hover:bg-primary-light transition-colors"
+                    class="material-symbols-rounded text-primary rounded-full p-1 border border-primary hover:bg-primary hover:text-neutral-bg transition-colors"
                   >
                     download
                   </span>

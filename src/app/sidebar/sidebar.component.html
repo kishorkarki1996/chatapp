@@ -1,0 +1,506 @@
+<!-- <button
+  data-drawer-target="default-sidebar"
+  data-drawer-toggle="default-sidebar"
+  aria-controls="default-sidebar"
+  type="button"
+  class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+>
+  <span class="sr-only">Open sidebar</span>
+  <svg
+    class="w-6 h-6"
+    aria-hidden="true"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clip-rule="evenodd"
+      fill-rule="evenodd"
+      d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+    ></path>
+  </svg>
+</button> -->
+
+<div class="flex">
+  <aside
+    id="default-sidebar"
+    class="w-80 h-screen border-r border-gray-light hidden lg:flex"
+    aria-label="Sidebar"
+  >
+    <div class="h-full overflow-y-auto bg-gray-50 flex flex-col">
+      <!-- header -->
+      <header class="bg-white z-10 mb-4">
+        <!-- search field -->
+        <div
+          class="relative min-h-[72px] mb-4 bg-gray-lightest grid items-center px-2"
+        >
+          <div class="absolute inset-y-0 right-2 flex items-center pr-3">
+            <button class="icon-search"></button>
+          </div>
+          <input
+            type="text"
+            id="input-group-1"
+            class="bg-white border border-gray-light text-gray-dark text-sm rounded-lg focus:ring-info focus:border-info block w-full pr-10 h-10"
+            placeholder="People, groups or messages"
+          />
+        </div>
+
+        <!-- tab section -->
+        <div class="flex justify-between border-b border-b-gray-light px-2">
+          <!-- chat icon -->
+          <a href="#" class="tab tab--active">
+            <span class="icon-chat text-3xl"></span>
+            <p class="tab__text mt-2">Chats</p>
+          </a>
+          <!-- new chat icon -->
+          <a href="#" class="tab">
+            <span class="icon-chat text-3xl"> </span>
+            <p class="tab__text mt-2">New Chat</p>
+          </a>
+          <!-- group chat icon -->
+          <a href="#" class="tab">
+            <span class="icon-group text-3xl"> </span>
+            <p class="tab__text mt-2">Group Chat</p>
+          </a>
+        </div>
+        <!-- tab end -->
+      </header>
+      <!-- header end -->
+      <!-- main content sidebar -->
+      <ul class="flex-auto overflow-y-auto px-2">
+        <!-- sidebar chat card -->
+        <!-- default -->
+        <li class="chat">
+          <a href="" class="chat__img">
+            <img src="../../assets/edward.png" alt="edward" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Johnathan Wick</h2>
+            <div class="content">
+              <div class="content__text">
+                <span class="text"> Hello there </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__unread">
+              <span class="">1</span>
+            </div>
+            <div class="chat__time">
+              <span class="icon-done"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- typing -->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/jenny.jpg" alt="jenny.jpg" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Jenny Jane</h2>
+            <div class="content">
+              <div class="content__text">
+                <span class="text"> Typing... </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__unread">
+              <span class="">1</span>
+            </div>
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- call end-->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/john.jpg" alt="john" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">John Mark</h2>
+            <div class="content">
+              <div class="content__text">
+                <span class="icon-call-duration text-2xl"></span>
+                <span class="text"
+                  >Call ended
+                  <span class="font-semibold">1h 49m 30s</span></span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__unread">
+              <span class="">1</span>
+            </div>
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- no answer-->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/edward.png" alt="edward" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Edward Carry</h2>
+            <div class="content">
+              <div class="content__text content__text--error">
+                <span class="icon-call-red text-xl"></span>
+                <span class="text">No answer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- missed call-->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/edward.png" alt="edward" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Edward Carry</h2>
+            <div class="content">
+              <div class="content__text content__text--error">
+                <span class="icon-call-red text-xl"></span>
+
+                <span class="text">Missed call</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- call declined-->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/edward.png" alt="edward" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Edward Carry</h2>
+            <div class="content">
+              <div class="content__text content__text--error">
+                <span class="icon-call-red text-xl"></span>
+                <span class="text">Call declined</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- voice msg -->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/edward.png" alt="edward" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Edward Carry</h2>
+            <div class="content">
+              <div class="content__text">
+                <span class="icon-mic text-lg"></span>
+                <span class="text">Sent a voice message</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+        <!-- sidebar chat card -->
+        <!-- photo msg -->
+        <li class="chat chat--online">
+          <a href="" class="chat__img">
+            <img src="../../assets/edward.png" alt="edward" />
+          </a>
+          <div class="chat__text">
+            <h2 class="name">Edward Carry</h2>
+            <div class="content">
+              <div class="content__text">
+                <span class="icon-photo text-lg"></span>
+                <span class="text">Sent a photo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat__status">
+            <div class="chat__time">
+              <span class="icon-done-gray"> </span>
+              <span>12:00 PM</span>
+            </div>
+          </div>
+        </li>
+        <!-- sidebar chat card end -->
+      </ul>
+      <!-- main content end -->
+      <!-- sidebar footer -->
+      <footer
+        class="min-h-[60px] border-t border-gray-light bg-gray-lightest text-center"
+      >
+        Sidebar Footer
+      </footer>
+    </div>
+  </aside>
+  <!-- main content -->
+  <main class="conversation flex-auto h-screen bg-violet-600 flex flex-col">
+    <!-- chat conversation header -->
+    <header
+      class="bg-gray-lightest min-h-[72px] px-2 lg:px-4 flex items-center gap-2"
+    >
+      <button class="lg:hidden">
+        <span class="icon-arrow_back"></span>
+      </button>
+      <div class="chat chat--online">
+        <a href="" class="chat__img">
+          <img src="../../assets/edward.png" alt="" />
+        </a>
+      </div>
+      <h1 class="font-bold text-base lg:text-lg text-gray-darkest">
+        Johnathan Wick
+      </h1>
+      <!-- action icons right -->
+      <div class="ml-auto space-x-4">
+        <button
+          class="icon-call-up text-xl hover:bg-white rounded-full p-2 w-8 h-8 inline-flex justify-center items-center"
+        ></button>
+        <!-- audio call popup -->
+        <!-- <app-make-call></app-make-call> -->
+        <button
+          class="icon-video text-xl hover:bg-white rounded-full p-2 w-8 h-8 inline-flex justify-center items-center"
+          (click)="openVideoPopup()"
+        ></button>
+
+        <!-- video call popup -->
+        <!-- <app-make-call></app-make-call> -->
+        <button
+          [matMenuTriggerFor]="chatOptions"
+          class="icon-more-vert text-xl hover:bg-white rounded-full p-2 w-8 h-8 inline-flex justify-center items-center"
+        ></button>
+        <!-- menu options -->
+        <mat-menu #chatOptions="matMenu" class="menu__options">
+          <button mat-menu-item>
+            <div class="options__text">Search Conversation</div>
+          </button>
+          <button mat-menu-item>
+            <div class="options__text">Mute Notifications</div>
+          </button>
+          <button mat-menu-item>
+            <div class="options__text">Delete Chat</div>
+          </button>
+          <button mat-menu-item><div class="options__text">Report</div></button>
+          <button mat-menu-item><div class="options__text">Block</div></button>
+        </mat-menu>
+      </div>
+    </header>
+    <main class="flex-auto overflow-y-auto bg-white space-y-4 p-4">
+      <!-- chat row sender-->
+      <div class="row group/row">
+        <div class="row__container">
+          <!-- avatar message time options -->
+          <div class="wrapper">
+            <!-- avatar message time -->
+            <div class="avatar-message-time">
+              <!-- avatar message -->
+              <div class="avatar-message">
+                <div class="chat chat--online">
+                  <a href="" class="chat__img">
+                    <img src="../../assets/edward.png" alt="" />
+                  </a>
+                </div>
+                <div class="message message--sender">
+                  <div class="message__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eius ex veritatis velit non laudantium fugit repellendus
+                    beatae
+                  </div>
+                </div>
+              </div>
+              <!-- time -->
+              <div class="message__time">
+                <!-- <span class="icon-checked_green text-xs"></span> -->
+                <span class="text-xs">10:24 PM</span>
+              </div>
+            </div>
+            <div class="message__options group-hover/row:visible group/option">
+              <div class="options">
+                <button class="icon-smile"></button>
+
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="defaultModal"
+                  data-modal-toggle="defaultModal"
+                  class="icon-redo2 block text-gray hover:text-gray-dark"
+                  type="button"
+                ></button>
+                <!-- forward-list component -->
+                <app-forward-list></app-forward-list>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- chat row end -->
+      <!-- chat row receiver-->
+      <!-- file type message -->
+      <div class="row row--receiver group/row">
+        <div class="row__container row__container--receiver">
+          <!-- avatar message time options -->
+          <div class="wrapper wrapper--receiver">
+            <!-- avatar message time -->
+            <div class="avatar-message-time">
+              <!-- avatar message -->
+              <div class="avatar-message">
+                <div class="message message--receiver">
+                  <div class="message__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eius ex veritatis velit non laudantium fugit repellendus
+                    beatae
+                  </div>
+                  <!-- file section -->
+                  <div class="message__file">
+                    <img src="../../assets/pdf.png" class="fileicon" alt="" />
+                    <div class="file">
+                      <div class="file__title">Documetation.pdf</div>
+                      <div class="file__info">
+                        <p>218 KB</p>
+                      </div>
+                    </div>
+                    <a href="#" download>
+                      <span class="icon-Download"></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- time -->
+              <div class="message__time">
+                <span class="icon-done-double text-lg"></span>
+                <span class="text-xs">10:24 PM</span>
+              </div>
+            </div>
+            <div class="message__options group-hover/row:visible group/option">
+              <div class="options">
+                <button class="icon-smile"></button>
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="defaultModal"
+                  data-modal-toggle="defaultModal"
+                  class="icon-undo2 block text-gray hover:text-gray-dark"
+                  type="button"
+                ></button>
+                <!-- forward-list component -->
+                <app-forward-list></app-forward-list>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- chat row end -->
+      <!-- chat row sender-->
+      <div class="row group/row">
+        <div class="row__container">
+          <!-- avatar message time options -->
+          <div class="wrapper">
+            <!-- avatar message time -->
+            <div class="avatar-message-time">
+              <!-- avatar message -->
+              <div class="avatar-message">
+                <div class="chat chat--online">
+                  <a href="" class="chat__img">
+                    <img src="../../assets/edward.png" alt="" />
+                  </a>
+                </div>
+                <div class="message message--sender">
+                  <div class="message__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eius ex veritatis velit non laudantium fugit repellendus
+                    beatae
+                  </div>
+                </div>
+              </div>
+              <!-- time -->
+              <div class="message__time">
+                <!-- <span class="icon-checked_green text-xs"></span> -->
+                <span class="text-xs">10:24 PM</span>
+              </div>
+            </div>
+            <div class="message__options group-hover/row:visible group/option">
+              <div class="options">
+                <button class="icon-smile"></button>
+
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="defaultModal"
+                  data-modal-toggle="defaultModal"
+                  class="icon-redo2 block text-gray hover:text-gray-dark"
+                  type="button"
+                ></button>
+                <!-- forward-list component -->
+                <app-forward-list></app-forward-list>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- chat row end -->
+    </main>
+    <!-- chat conversation footer -->
+    <footer
+      class="min-h-[60px] bg-white border-t border-gray-lightest flex items-center px-4 relative"
+    >
+      <!-- typing field -->
+      <!-- search field -->
+
+      <div class="absolute inset-y-0 right-4 flex gap-4 items-center pr-3">
+        <button class="icon-attach text-xl px-2"></button>
+        <button class="icon-mic text-xl px-2 border-x border-gray"></button>
+        <button class="icon-send-arrow text-xl px-2"></button>
+      </div>
+      <input
+        type="text"
+        id="input-group-1"
+        class="bg-gray-lightest border border-gray-light text-gray-dark text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pr-40 h-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Message"
+      />
+    </footer>
+  </main>
+</div>

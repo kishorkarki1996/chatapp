@@ -6,7 +6,7 @@
 }
 .message {
   &__time {
-    @apply text-muted text-xs mb-2;
+    @apply text-gray text-xs mb-2;
     &--right {
       @apply text-right;
     }
@@ -18,30 +18,30 @@
     }
   }
   &__block {
-    @apply bg-primary-bg rounded-lg max-w-md p-4 text-sm cursor-pointer relative overflow-hidden shadow-sm;
+    @apply bg-primary-lightest rounded-lg max-w-md p-4 text-sm cursor-pointer relative overflow-hidden shadow-sm;
     &--user {
-      @apply bg-offwhite;
+      @apply bg-primary-lightest;
     }
   }
   &__link {
-    @apply border border-border bg-neutral-bg mt-2 overflow-hidden p-2 pl-8 rounded-md relative before:absolute before:bg-info before:w-4 before:h-full before:left-0 before:top-0;
+    @apply border bg-primary-light bg-gray-light mt-2 overflow-hidden p-2 pl-8 rounded-md relative before:absolute before:bg-info before:w-4 before:h-full before:left-0 before:top-0;
   }
 }
 .emoji {
-  @apply text-lg text-muted hover:scale-110 hover:text-primary transition-all relative;
+  @apply text-lg text-gray hover:scale-110 hover:text-primary transition-all relative;
 }
 .emoji__icons {
   @apply text-primary hover:-translate-y-1 transition-transform;
 }
 .file {
-  @apply bg-neutral-bg p-2 rounded-md;
+  @apply bg-gray-light p-2 rounded-md;
   &__title {
-    @apply text-sm text-neutral;
+    @apply text-sm text-gray-light;
   }
   &__info {
-    @apply text-neutral text-xs flex items-start mt-2;
+    @apply text-gray-light text-xs flex items-start mt-2;
     p {
-      @apply px-2 border-r border-r-border;
+      @apply px-2 border-r border-gray-light;
     }
   }
 }

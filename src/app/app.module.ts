@@ -12,19 +12,28 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { CallPopupComponent } from './call-popup/call-popup.component';
 import { MakeCallComponent } from './call/make-call/make-call.component';
 import { ReceiveCallComponent } from './call/receive-call/receive-call.component';
-
+import { OngoingCallComponent } from './call/ongoing-call/ongoing-call.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ForwardListComponent } from './forward-list/forward-list.component';
+import {
+  MatDialog,
+  MatDialogRef,
+  MatDialogModule,
+} from '@angular/material/dialog';
+import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ChatsComponent,
     ChatInterfaceComponent,
-    CallPopupComponent,
     MakeCallComponent,
     ReceiveCallComponent,
+    OngoingCallComponent,
+    SidebarComponent,
+    ForwardListComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +44,8 @@ import { ReceiveCallComponent } from './call/receive-call/receive-call.component
     MatMenuModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
